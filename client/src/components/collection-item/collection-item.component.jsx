@@ -69,9 +69,7 @@ const DialogActions = withStyles((theme) => ({
 
 
 const CollectionItem = ({ item, addItem }) => {
-  const { name, price, imageUrl, description, oldPrice, isDiscounted, id } = item;
-  console.log("ccc", id)
-
+  const { name, price, imageUrl, description, oldPrice, isDiscounted } = item;
   
 const [open, setOpen] = React.useState(false);
 

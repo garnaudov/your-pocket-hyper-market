@@ -55,9 +55,7 @@ export const addCollectionAndDocuments = async (
 };
 
 export const convertCollectionsSnapshotToMap = (collections) => {
-  console.log("collections", collections)
   const transformedCollection = collections.docs.map((doc) => {
-    console.log("docc", doc)
     const { title, items } = doc.data();
 
     return {
@@ -70,7 +68,6 @@ export const convertCollectionsSnapshotToMap = (collections) => {
 
   return transformedCollection.reduce((accumulator, collection) => {
     accumulator[collection.title.toLowerCase()] = collection;
-    console.log("acc", accumulator)
     return accumulator;
   }, {});
 };
