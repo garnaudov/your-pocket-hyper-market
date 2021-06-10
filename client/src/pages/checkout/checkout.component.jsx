@@ -41,7 +41,8 @@ const CheckoutPage = ({ cartItems, total }) => (
       <CheckoutItem key={cartItem.id} cartItem={cartItem} />
     ))}
     <TotalContainer>Общо: {total} лв.</TotalContainer>
-    <WarningContainer>
+    {total<10 ? (<WarningContainer>Остават ви още {(10-total).toPrecision(1)} лв за достигане до минималната сума на поръчката</WarningContainer>) : null}
+      <WarningContainer>
       *Моля използвайте следните тестови данни за плащане*
       <br />
       4242 4242 4242 4242 - Exp: 01/22 - CVV: 123
