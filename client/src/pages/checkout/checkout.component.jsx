@@ -41,7 +41,7 @@ const CheckoutPage = ({ cartItems, total }) => (
       <CheckoutItem key={cartItem.id} cartItem={cartItem} />
     ))}
     <TotalContainer>Общо: {total} лв.</TotalContainer>
-    {total<10 ? (<WarningContainer>Остават ви още {(10-total).toPrecision(1)} лв за достигане до минималната сума на поръчката</WarningContainer>) : null}
+    {total<10 ? (<WarningContainer>Минималната сума за поръчка е 10 лв. Моля добавете още артикули към вашата количка.</WarningContainer>) : null}
       <WarningContainer>
       *Моля използвайте следните тестови данни за плащане*
       <br />
